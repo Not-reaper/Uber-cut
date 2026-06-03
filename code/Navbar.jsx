@@ -1,7 +1,7 @@
 // Navbar.jsx — Barre de navigation en haut de chaque page
 // Affiche les liens de navigation et change les boutons
 // selon que l'utilisateur est connecté ou non.
-
+ 
 import React from 'react'
 // NavLink : comme <Link> mais ajoute une classe CSS quand le lien est actif
 // useNavigate : permet de naviguer vers une autre page par code
