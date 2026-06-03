@@ -1,0 +1,87 @@
+/* ─────────────────────────────────────────────────────────────────
+   UberCut — Personnalisation des images
+   ─────────────────────────────────────────────────────────────────
+   RÈGLE D'OR : chaque image a sa propre classe CSS.
+   Aucun style global ne touche toutes les <img> du site.
+
+   ┌─ Comment modifier une image ?
+   │  1. Remplace le fichier dans /public/assets/images/
+   │  2. Ajuste sa classe ci-dessous (object-fit, position, etc.)
+   │  3. Aucun autre composant n'est affecté.
+   └──────────────────────────────────────────────────────────────── */
+
+/* ── Bannière Hero (HomePage) ─────────────────────────────────── */
+.img-home-hero {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center 40%;
+  /* Changer la position verticale de focus : center top, center bottom */
+}
+
+/* ── Brand mark (Navbar / Footer) ────────────────────────────── */
+.img-brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ALEXANDRE MOREAU
+════════════════════════════════════════════════════════════════ */
+/* Avatar (carte, liste, profil) */
+.img-alexandre-avatar {
+  object-fit: cover;
+  object-position: 50% 30%;
+  /* Ajuste la zone de recadrage du visage (0% = haut, 100% = bas) */
+}
+/* Couverture carte catalogue */
+.img-alexandre-card {
+  object-fit: cover;
+  object-position: center;
+  /* object-position: 50% 20%;  ← décale vers le haut si besoin */
+}
+/* Bannière profil */
+.img-alexandre-hero {
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+/* Galerie individuelle (gallery-1 à gallery-4) */
+.img-alexandre-g1 { object-fit: cover; object-position: center; }
+.img-alexandre-g2 { object-fit: cover; object-position: center; }
+.img-alexandre-g3 { object-fit: cover; object-position: center; }
+.img-alexandre-g4 { object-fit: cover; object-position: center; }
+
+/* ════════════════════════════════════════════════════════════════
+   SOFIA BENALI
+════════════════════════════════════════════════════════════════ */
+.img-sofia-avatar { object-fit: cover; object-position: 50% 25%; }
+.img-sofia-card   { object-fit: cover; object-position: center; }
+.img-sofia-hero   { object-fit: cover; object-position: 50% 40%; }
+.img-sofia-g1 { object-fit: cover; object-position: center; }
+.img-sofia-g2 { object-fit: cover; object-position: center; }
+.img-sofia-g3 { object-fit: cover; object-position: center; }
+.img-sofia-g4 { object-fit: cover; object-position: center; }
+
+/* ════════════════════════════════════════════════════════════════
+   KEVIN TRAN
+════════════════════════════════════════════════════════════════ */
+.img-kevin-avatar { object-fit: cover; object-position: 50% 30%; }
+.img-kevin-card   { object-fit: cover; object-position: center; }
+.img-kevin-hero   { object-fit: cover; object-position: 50% 35%; }
+.img-kevin-g1 { object-fit: cover; object-position: center; }
+.img-kevin-g2 { object-fit: cover; object-position: center; }
+.img-kevin-g3 { object-fit: cover; object-position: center; }
+.img-kevin-g4 { object-fit: cover; object-position: center; }
+
+/* ─────────────────────────────────────────────────────────────────
+   GUIDE RAPIDE — Ajouter un nouveau coiffeur
+   ─────────────────────────────────────────────────────────────────
+   1. Crée le dossier : /public/assets/images/providers/prenom/
+   2. Dépose : avatar.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+   3. Ajoute ses classes ici (copie un bloc ci-dessus et renomme)
+   4. Dans /src/data/providers.js, renseigne :
+        imageClass: { avatar: 'img-prenom-avatar', cardCover: 'img-prenom-card', profileHero: 'img-prenom-hero' }
+        galleryClasses: ['img-prenom-g1', 'img-prenom-g2', 'img-prenom-g3']
+   ─────────────────────────────────────────────────────────────────
+*/
