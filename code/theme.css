@@ -1,0 +1,107 @@
+/* ─────────────────────────────────────────────────────────────────
+   UberCut — Design System
+   Palette : blanc chaud / gris éditorial / noir charbon
+   Typographie : Cormorant Garamond (display) + DM Sans (corps)
+───────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:         #f6f5f1;
+  --bg-2:       #eeecea;
+  --bg-white:   #ffffff;
+  --bg-dark:    #1a1917;
+  --bg-dark-2:  #222120;
+
+  /* Cartes */
+  --card:       #ffffff;
+  --card-2:     #f9f8f5;
+
+  /* Bordures */
+  --border:     #e3e2dc;
+  --border-2:   #ccc9c2;
+
+  /* Texte */
+  --text:       #1a1917;
+  --muted:      #6b6a65;
+  --muted-2:    #9b9a94;
+  --text-inv:   #f6f5f1;
+  --muted-inv:  #a8a7a2;
+
+  /* Ombres */
+  --shadow-xs:  0 1px 2px rgba(26,25,23,.04);
+  --shadow-sm:  0 1px 4px rgba(26,25,23,.05), 0 2px 10px rgba(26,25,23,.04);
+  --shadow:     0 2px 8px rgba(26,25,23,.06), 0 8px 24px rgba(26,25,23,.06);
+  --shadow-lg:  0 4px 16px rgba(26,25,23,.08), 0 20px 56px rgba(26,25,23,.10);
+
+  /* Typographie */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Géométrie */
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius:     14px;
+  --radius-lg:  22px;
+  --radius-xl:  32px;
+
+  /* Transitions */
+  --ease:       cubic-bezier(.4, 0, .2, 1);
+  --ease-out:   cubic-bezier(.0, 0, .2, 1);
+  --ease-spring:cubic-bezier(.34, 1.56, .64, 1);
+  --duration:   220ms;
+}
+
+/* ── Reset & Base ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 15px; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ── Focus accessible ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+/* ── Typographie display ───────────────────────────────────────── */
+h1, h2, h3, .h-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* ── Animations ────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.anim-fade-up    { animation: fadeUp   .5s var(--ease) both; }
+.anim-fade-in    { animation: fadeIn   .4s var(--ease) both; }
+.anim-scale-in   { animation: scaleIn  .35s var(--ease) both; }
+.anim-delay-1    { animation-delay: .08s; }
+.anim-delay-2    { animation-delay: .16s; }
+.anim-delay-3    { animation-delay: .24s; }
+.anim-delay-4    { animation-delay: .32s; }
